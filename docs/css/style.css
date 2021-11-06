@@ -1,0 +1,301 @@
+#fullpage{
+    background: #000;
+}
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.texto-naranja {
+    font-weight: 450;
+    color: orange;
+}
+
+.texto-blanco {
+    font-weight: 700;
+    color: #fff;
+}
+
+.texto-negro {
+	color: #000;
+}
+
+/* Clases de fullpage */
+
+
+#fp-nav ul li a span{
+    background: orange;
+}
+#fp-nav ul li .fp-tooltip{
+    color: white;
+}
+
+/*menu navegacion*/
+
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 70;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.nav li ,
+.nav a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color:#c2c2c2;
+    transition:.5s ease-out;
+}
+
+
+
+.nav li.active{
+    border-bottom: 3px solid #29B6F6;
+}
+
+.menu li a {
+    transition: .5s ease-out;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu li.active a,
+.menu li:hover a {
+    color:#03A9F4;
+}
+
+
+
+/* header */
+.header{
+    background: url('../img/note8Pro.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header .contenedor-titulo{
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.header .titulo{
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.header .contenedor-icono{
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    animation: bajar_subir 1s ease-in-out infinite ;
+    font-size: 30px;
+}
+
+
+/*prodcutos*/
+
+.Productos article{
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.informacion-p{
+    position: absolute;
+    left: 100px;
+    top: 40%;
+}
+.Productos .informacion-p::before{
+    content: '';
+    height: 90px;
+    width: 7px;
+    display: inline;
+    background: blue;
+    position: absolute;
+    top: 28%;
+    margin: -15px;
+}
+.otra::before{
+    content: '';
+    color: white;
+    height: 90px;
+    width: 7px;
+    display: inline;
+    background: white;
+    position: absolute;
+    top: 28%;
+    left: 0%;
+    margin: -15px;
+}
+
+.Productos article:nth-child(1){
+    background-image: url('../img/90.jpg');
+}
+.Productos article:nth-child(2){
+    background-image: url('../img/10.jpg');
+}
+.Productos article:nth-child(3){
+    background-image: url('../img/logoo.jpg');
+    background-size: cover;
+    color: white;
+}
+.Productos article:nth-child(4){
+    background-image: url('../img/Xiaomi-Redmi-Note-10-Pro.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.otra{
+    color: wheat;
+}
+
+.Productos .informacion-p{
+    margin: 0 30px;
+}
+
+.Productos .modelo{
+    font-size: 45px;
+}
+
+.Productos .descripcion{
+    font-size: 22px;
+}
+
+.Productos.precio{
+    font-size: 25px;
+
+}
+
+
+
+/*Mas estilos*/
+.airpods-laptop article{
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+.airpods-laptop article:nth-child(1){
+    background-image: url('../img/redmiairdots_9.jpg');
+    background-size: cover;
+    color: white;
+}
+.airpods-laptop article:nth-child(2){
+    background-image: url('../img/23.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.airpods-laptop .informacion-mas::before{
+    content: '';
+    height: 90px;
+    width: 7px;
+    display: inline;
+    background: blue;
+    position: absolute;
+    top: 28%;
+    margin: -15px;
+}
+
+.informacion-mas{
+    position: absolute;
+    left: 200px;
+    top: 40%;
+}
+
+.Airpods{
+    font-size: 34px;
+}
+.texto-naranjaX {
+    font-size: 40px;
+}
+
+.precioX{
+    font-size: 20px;
+}
+
+.laptop{
+    font-size: 34px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.descripcionL{
+    color: black;
+}
+
+.texto-laptop{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+
+/*footer*/
+
+.cuadro{
+    
+}
+
+.precioL{
+    color: rgb(0, 0, 0);
+}
+
+
+/* flechas de los slides */
+
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev{
+    top: 95%;
+}
+
+.fp-controlArrow.fp-prev{
+    left: 80%;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #1565C0 transparent transparent;
+}
+
+.fp-controlArrow.fp-next{
+    right: 10%;
+    border-width: 20px 0 20px 20px;
+    border-color:transparent transparent transparent #1565C0;
+}
+
+
+
+
+
+/* animacion */
+@keyframes bajar_subir{
+    0%{transform: translateY(22px);}
+    25%{transform: translateY(0);}
+    100%{transform: translateY(22px);}
+}
+
+
+/*typed.js Libreria*/
+
+.typed-cursor{
+    color: rgb(207, 143, 23);
+}
